@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAKHRA Personal Training</title>
+    <link rel="stylesheet" href="/basepagestyle.css">
+    <script src="/basepagejs.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">SKHRA fitness<span></span></div>
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/shop">shop</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="main-content-wrapper">
+        <div class="hero" id="home">
+            <h1>Transform Your Body, <span class="fitness-icon">Transform Your Life</span></h1>
+            <p>Online personal training tailored to your unique goals.</p>
+            <a href="#contact" class="cta-button">Start Your Journey Today</a>
+        </div>
+
+        <section class="testimonials" id="testimonials">
+            <div class="section-title">
+                <h2>Client Feedbacks</h2>
+            </div>
+
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <p class="testimonial-text">"machalah mnadhem !"</p>
+                    <p class="testimonial-author">- hamma</p>
+                </div>
+
+                <div class="testimonial-slide">
+                    <p class="testimonial-text">"yaleab wahdo."</p>
+                    <p class="testimonial-author">- slah</p>
+                </div>
+
+                <div class="testimonial-slide">
+                    <p class="testimonial-text">"mekla kesha ya bro."</p>
+                    <p class="testimonial-author">- amine</p>
+                </div>
+
+                <div class="testimonial-nav">
+                    <button class="prev-btn">&#8592;</button>
+                    <button class="next-btn">&#8594;</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="/backpose.jpg" alt="">
+                </div>
+                <div class="service-content">
+                    <h3>Personal Training</h3>
+                    <p>1-1 sessions customized to your fitness level and goals. Expert guidance every step of the
+                        way.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="/mekla2.jpg" alt="">
+                </div>
+                <div class="service-content">
+                    <h3>Nutrition Coaching</h3>
+                    <p>Tailored nutrition plans to complement your fitness routine. Fuel your body for optimal
+                        performance and results.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-cubes-wrapper">
+            <div class="section-title" style="margin-top: 3rem;">
+                <h2>Why Choose Us</h2>
+            </div>
+            <div class="info-cubes-container">
+                <div class="info-cube">
+                    <h3>FREE</h3>
+                    <p>For now i do it for free. You have nothing to lose.</p>
+                </div>
+                <div class="info-cube">
+                    <h3>Custom Plans</h3>
+                    <p>We build tailored workout and nutrition programs for your body type and goals.</p>
+                </div>
+                <div class="info-cube">
+                    <h3>Proven Results</h3>
+                    <p>Join a bunch of satisfied clients who have transformed their lives with us.</p>
+                </div>
+                <div class="info-cube">
+                    <h3>No bs</h3>
+                    <p>im not like any other coach, i want to help other people with the info i gathered along my
+                        journey, This is my biggest passion and it'll be a pleasure for me to help.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- contact formulaire mtaa client-->
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2 class="contact-title-gradient">Get In Touch</h2>
+                <p class="contact-subtitle">ONLY for strict people. We'd love to hear from you !</p>
+
+                <div class="contact-cards">
+                    <div class="contact-card-pill">
+                        <span class="contact-icon">📍</span>
+                        <div class="contact-card-text">
+                            <strong>Address</strong>
+                            <span>Mahdia, hiboun</span>
+                        </div>
+                    </div>
+                    <div class="contact-card-pill">
+                        <span class="contact-icon">📞</span>
+                        <div class="contact-card-text">
+                            <strong>Phone</strong>
+                            <span>52 482 375</span>
+                        </div>
+                    </div>
+                    <div class="contact-card-pill">
+                        <span class="contact-icon">✉️</span>
+                        <div class="contact-card-text">
+                            <strong>Email</strong>
+                            <span>skhfitnesscoaching@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-card-pill">
+                        <span class="contact-icon">🕐</span>
+                        <div class="contact-card-text">
+                            <strong>Hours</strong>
+                            <span>8am-12pm With a 1h reply span (i'll do my best)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <form id="contact-form">
+                    <div class="floating-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Full Name</label>
+                        <div class="input-glow"></div>
+                    </div>
+
+
+
+                    <div class="floating-group">
+                        <input type="tel" id="phone" name="phone" required placeholder=" ">
+                        <label for="phone">Phone</label>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="floating-group">
+                        <textarea id="message" name="message" placeholder=" "></textarea>
+                        <label for="message">Additional comments AND please specify where you want us to talk with you,
+                            whatsapp (best one) or instagram Dms.</label>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <button type="submit" class="submit-button-premium">
+                        <span>Send Message</span>
+                        <div class="shimmer"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#">&#9733;</a>
+            <a href="#">&#9733;</a>
+            <a href="#">&#9733;</a>
+        </div>
+
+        <p class="copyright">&copy; 2023 SAKHRA Fitness Personal Training. All rights reserved.</p>
+    </footer>
+    <!-- popup baad ma yaaml login-->
+    <div id="popup"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
+        <div
+            style="background:white; padding:50px 40px; border-radius:16px; text-align:center; max-width:400px; width:90%; box-shadow: 0 20px 60px rgba(0,0,0,0.3); animation: popupIn 0.3s ease;">
+            <div style="font-size:60px; margin-bottom:10px;">🙏</div>
+            <h2 style="margin:0 0 10px; color:#222; font-size:24px;">Thank You!</h2>
+            <p style="color:#666; font-size:15px; line-height:1.6; margin-bottom:30px;">Thanks for trusting us.<br>We'll
+                get back to you as soon as possible.Check your WHATSAPP Dms</p>
+            <button onclick="document.getElementById('popup').style.display='none'"
+                style="background:#222; color:white; border:none; padding:12px 30px; border-radius:8px; font-size:15px; cursor:pointer;">Close</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

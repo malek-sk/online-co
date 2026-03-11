@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAKHRA Fitness - Admin Panel</title>
+    <link rel="stylesheet" href="adminstyle.css">
+    <script src="adminjs.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">SAKHRA<span>Fitness</span> Admin</div>
+            <nav>
+                <ul>
+                    <li><a href="base page.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="admin-container">
+        <div class="admin-header">
+            <h1>Product Management</h1>
+            <p>Add, edit, and delete training programs in your shop</p>
+        </div>
+        
+        <div class="admin-panel">
+            <div class="product-form-container">
+                <h2 id="form-title">Add New Product</h2>
+                <form id="product-form" class="product-form">
+                    <input type="hidden" id="product-id">
+                    
+                    <div class="form-group">
+                        <label for="product-title">Product Title</label>
+                        <input type="text" id="product-title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-price">Price ($)</label>
+                        <input type="number" id="product-price" step="0.01" min="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-description">Description</label>
+                        <textarea id="product-description" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-image">Image URL</label>
+                        <input type="text" id="product-image" placeholder="https://via.placeholder.com/300x200/555555/ffffff?text=Program+Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-category">Category</label>
+                        <select id="product-category" required>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-availability">Availability</label>
+                        <select id="product-availability" required>
+                            <option value="available">Available</option>
+                            <option value="unavailable">Coming Soon</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit" class="form-button save-button">Save Product</button>
+                        <button type="button" class="form-button cancel-button" id="cancel-button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="products-list-container">
+                <h2>
+                    Current Products
+                    <button id="add-new-product" class="add-new-button">Add New</button>
+                </h2>
+                
+                <table class="products-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Availability</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-list">
+                        <!-- Products will be loaded here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About SAKHRA Fitness</h3>
+                <p>We provide professional training programs designed to help you achieve your fitness goals, no matter your current fitness level.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Admin Tools</h3>
+                <p>This admin panel allows you to manage all products in your shop.</p>
+                <p>Remember to log out when finished.</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 SAKHRA Fitness. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

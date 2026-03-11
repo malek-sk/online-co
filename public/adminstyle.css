@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #141414;
+    color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #222222, #444444);
+    color: white;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 2;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-out;
+}
+
+.logo span {
+    color: #aaaaaa;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    animation: fadeIn 1s ease-out;
+    animation-fill-mode: both;
+}
+
+nav ul li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+nav ul li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+nav ul li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+nav ul li a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0;
+}
+
+/* Admin Content */
+.admin-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.admin-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.admin-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.admin-header p {
+    font-size: 1.1rem;
+    color: #aaaaaa;
+}
+
+/* Admin Panel Styles */
+.admin-panel {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+/* Product Form */
+.product-form-container {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    animation: fadeIn 1s ease-out 0.3s;
+    animation-fill-mode: both;
+}
+
+.product-form-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #aaaaaa;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.product-form-container h2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #cccccc;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #2a2a2a;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #c8a96e;
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.form-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-button {
+    background: linear-gradient(135deg, #c8a96e, #a07840);
+    color: #1a1a1a;
+}
+
+.save-button:hover {
+    opacity: 0.9;
+}
+
+.cancel-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Products List */
+.products-list-container {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    animation: fadeIn 1s ease-out 0.5s;
+    animation-fill-mode: both;
+}
+
+.products-list-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #aaaaaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-new-button {
+    background: linear-gradient(135deg, #c8a96e, #a07840);
+    color: #1a1a1a;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.add-new-button:hover {
+    opacity: 0.9;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.products-table th,
+.products-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.products-table th {
+    background-color: #1e1e1e;
+    color: #aaaaaa;
+    border-bottom: 2px solid #2a2a2a;
+}
+
+.products-table tr:hover {
+    background-color: #3a3a3a;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.edit-button,
+.delete-button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-button {
+    background-color: #2196f3;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #0b7dda;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.product-image-preview {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+    border-top: 1px solid #2a2a2a;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #aaaaaa;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #444444;
+    font-size: 0.9rem;
+    color: #777777;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .admin-panel {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1.5rem;
+    }
+
+    nav ul li {
+        margin: 0 0.75rem;
+    }
+
+    .products-table {
+        font-size: 0.9rem;
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

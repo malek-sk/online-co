@@ -1,0 +1,343 @@
+ /* Base Styles */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ body {
+     background-color: #141414;
+     color: #f0f0f0;
+     overflow-x: hidden;
+ }
+
+ /* Animation Keyframes */
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ @keyframes pulse {
+     0% {
+         transform: scale(1);
+     }
+
+     50% {
+         transform: scale(1.05);
+     }
+
+     100% {
+         transform: scale(1);
+     }
+ }
+
+ /* Header Styles */
+ header {
+     background: linear-gradient(135deg, #222222, #444444);
+     color: white;
+     padding: 1rem;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .header-content {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 2rem 1rem;
+     position: relative;
+     z-index: 2;
+     background-color: #1e1e1e;
+     border-radius: 10px;
+ }
+
+ .logo {
+     font-size: 2rem;
+     font-weight: bold;
+     animation: fadeIn 1s ease-out;
+ }
+
+ .logo span {
+     color: #aaaaaa;
+ }
+
+ nav ul {
+     display: flex;
+     list-style: none;
+ }
+
+ nav ul li {
+     margin-left: 1.5rem;
+     animation: fadeIn 1s ease-out;
+     animation-fill-mode: both;
+ }
+
+ nav ul li:nth-child(1) {
+     animation-delay: 0.2s;
+ }
+
+ nav ul li:nth-child(2) {
+     animation-delay: 0.4s;
+ }
+
+ nav ul li:nth-child(3) {
+     animation-delay: 0.6s;
+ }
+
+ nav ul li a {
+     color: #aaaaaa;
+     text-decoration: none;
+     font-weight: 500;
+     transition: color 0.3s;
+ }
+
+ nav ul li a:hover {
+     color: #f0f0f0;
+ }
+
+ /* Shop Content */
+ .shop-container {
+     max-width: 1200px;
+     margin: 2rem auto;
+     padding: 0 1rem;
+ }
+
+ .shop-header {
+     text-align: center;
+     margin-bottom: 2rem;
+     animation: fadeIn 1s ease-out;
+ }
+
+ .shop-header h1 {
+     font-size: 2.5rem;
+     margin-bottom: 1rem;
+ }
+
+ .shop-header p {
+     font-size: 1.1rem;
+     color: #aaaaaa;
+ }
+
+ /* Filter Section */
+ .filter-section {
+     background-color: #1e1e1e;
+     padding: 1.5rem;
+     border-radius: 10px;
+     margin-bottom: 2rem;
+     border: 1px solid #2a2a2a;
+     animation: fadeIn 1s ease-out 0.3s;
+     animation-fill-mode: both;
+ }
+
+ .filter-section h2 {
+     margin-bottom: 1rem;
+     font-size: 1.5rem;
+     color: #aaaaaa;
+     opacity: 0;
+     transform: translateY(25px);
+     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+ }
+
+ .filter-section h2.visible {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ .filter-options {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1rem;
+ }
+
+ .filter-option {
+     background-color: #444444;
+     border: none;
+     color: white;
+     padding: 0.5rem 1rem;
+     border-radius: 50px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+
+ .filter-option.active {
+     background: linear-gradient(135deg, #c8a96e, #a07840);
+     color: #1a1a1a;
+     font-weight: bold;
+ }
+
+ .filter-option:hover {
+     background-color: #555555;
+ }
+
+ /* Products Grid */
+ .products-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+     gap: 2rem;
+ }
+
+ .product-card {
+     background-color: #1e1e1e;
+     border-radius: 10px;
+     overflow: hidden;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+     transition: transform 0.3s, box-shadow 0.3s;
+     border: 1px solid #2a2a2a;
+     animation: fadeIn 0.8s ease-out;
+     animation-fill-mode: both;
+ }
+
+ .product-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+ }
+
+ .product-image {
+     height: 200px;
+     background-color: #555555;
+     background-size: cover;
+     background-position: center;
+     position: relative;
+ }
+
+ .availability-badge {
+     position: absolute;
+     top: 1rem;
+     right: 1rem;
+     padding: 0.3rem 0.8rem;
+     border-radius: 50px;
+     font-size: 0.8rem;
+     font-weight: bold;
+ }
+
+ .available {
+     background-color: #4caf50;
+     color: white;
+ }
+
+ .unavailable {
+     background-color: #f44336;
+     color: white;
+ }
+
+ .product-content {
+     padding: 1.5rem;
+ }
+
+ .product-title {
+     font-size: 1.3rem;
+     margin-bottom: 0.5rem;
+     color: white;
+ }
+
+ .product-price {
+     font-size: 1.5rem;
+     font-weight: bold;
+     color: #aaaaaa;
+     margin-bottom: 1rem;
+ }
+
+ .product-description {
+     color: #cccccc;
+     margin-bottom: 1.5rem;
+     line-height: 1.5;
+ }
+
+ .product-button {
+     display: inline-block;
+     background: linear-gradient(135deg, #c8a96e, #a07840);
+     color: #1a1a1a;
+     padding: 0.8rem 1.5rem;
+     border-radius: 50px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: background-color 0.3s;
+ }
+
+ .product-button:hover {
+     opacity: 0.9;
+ }
+
+ /* Footer */
+ footer {
+     background-color: #1e1e1e;
+     color: #f0f0f0;
+     padding: 3rem 1rem;
+     margin-top: 4rem;
+     border-top: 1px solid #2a2a2a;
+ }
+
+ .footer-content {
+     max-width: 1200px;
+     margin: 0 auto;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 2rem;
+ }
+
+ .footer-section h3 {
+     font-size: 1.3rem;
+     margin-bottom: 1.5rem;
+     color: #aaaaaa;
+ }
+
+ .payment-methods {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1rem;
+ }
+
+ .payment-method {
+     background-color: #333333;
+     border-radius: 5px;
+     padding: 0.5rem 1rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 80px;
+     height: 50px;
+ }
+
+ .payment-method img {
+     max-width: 100%;
+     max-height: 100%;
+ }
+
+ .copyright {
+     text-align: center;
+     margin-top: 3rem;
+     padding-top: 1.5rem;
+     border-top: 1px solid #444444;
+     font-size: 0.9rem;
+     color: #777777;
+ }
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+     .header-content {
+         flex-direction: column;
+         text-align: center;
+     }
+
+     nav ul {
+         margin-top: 1.5rem;
+     }
+
+     nav ul li {
+         margin: 0 0.75rem;
+     }
+
+     .products-grid {
+         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+     }
+ }
