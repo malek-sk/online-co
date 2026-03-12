@@ -70,7 +70,7 @@ app.post('/contact', async (req, res) => {
             from: 'NEW CLIENT <onboarding@resend.dev>',
             to: 'skhfitnesscoaching@gmail.com',
             subject: 'NEW CLIENT! 🎉',
-            html: `<h2>client ${name}!</h2><p>Phone number ${phone}</p>`
+            html: `<h2>New client named ${name}!</h2><p>Phone number ${phone}</p>`
         });
     } catch (e) {
         console.error('Email failed:', e);

@@ -14,7 +14,7 @@
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">SKHRA fitness<span></span></div>
+            <div class="logo">SKHRA fitness <span></span></div>
             <nav>
                 <ul>
                     <li><a href="/home">Home</a></li>
@@ -170,7 +170,7 @@
 
 
                     <div class="floating-group">
-                        <input type="tel" id="phone" name="phone" required placeholder=" ">
+                        <input type="tel" id="phone" name="phone" required placeholder=" " pattern="[0-9]{8}" title="Please enter a valid 8 digit phone number" maxlength="8">
                         <label for="phone">Phone</label>
                         <div class="input-glow"></div>
                     </div>
@@ -232,10 +232,6 @@
     document.getElementById('contact-form').addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const btn = document.querySelector('.submit-button-premium');
-        btn.disabled = true;
-        btn.querySelector('span').textContent = 'Sending...';
-
         const name = document.getElementById('name').value;
         const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
@@ -252,7 +248,6 @@
 
         if (response.status === 400) {
             document.getElementById('popup-exists').style.display = 'flex';
-            btn.disabled = false;
         } else if (data.success) {
             document.getElementById('popup').style.display = 'flex';
         }
