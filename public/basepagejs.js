@@ -75,12 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // fazet l popup
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            document.getElementById('popup').style.display = 'flex';
-            e.target.reset();
-        });
-    }
 });

@@ -200,7 +200,7 @@
 
         <p class="copyright">&copy; 2023 SAKHRA Fitness Personal Training. All rights reserved.</p>
     </footer>
-    <!-- popup baad ma yaaml login-->
+    <!-- popup baad ma yaaml send l contact-->
     <div id="popup"
         style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
         <div
@@ -214,6 +214,42 @@
         </div>
     </div>
 
+
+    <div id="popup-exists"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
+        <div
+            style="background:white; padding:50px 40px; border-radius:16px; text-align:center; max-width:400px; width:90%; box-shadow: 0 20px 60px rgba(0,0,0,0.3); animation: popupIn 0.3s ease;">
+            <div style="font-size:60px; margin-bottom:10px;">⚠️</div>
+            <h2 style="margin:0 0 10px; color:#222; font-size:24px;">Already Registered!</h2>
+            <p style="color:#666; font-size:15px; line-height:1.6; margin-bottom:30px;">This phone number is already in
+                our system.<br></p>
+            <button onclick="document.getElementById('popup-exists').style.display='none'"
+                style="background:#222; color:white; border:none; padding:12px 30px; border-radius:8px; font-size:15px; cursor:pointer;">Close</button>
+        </div>
+    </div>
 </body>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+
+        const response = await fetch('/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, phone, message })
+        });
+
+        const data = await response.json();
+
+        if (response.status === 400) {
+            document.getElementById('popup-exists').style.display = 'flex';
+        } else if (data.success) {
+            document.getElementById('popup').style.display = 'flex';
+        }
+    });
+</script>
 
 </html>
