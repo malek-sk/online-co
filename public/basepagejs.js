@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const data = {
             name: e.target.name.value,
-            email: e.target.email.value,
             phone: e.target.phone.value,
             message: e.target.message.value
         };
