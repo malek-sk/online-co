@@ -38,11 +38,11 @@ app.get('/shop', (req, res) => {
 });
 
 app.post('/contact', async (req, res) => {
-    const { name, email, phone, message } = req.body;
+    const { name, phone, message } = req.body;
     
     const { error } = await supabase
         .from('clientContacts')
-        .insert([{ name, email, phone, message }]);
+        .insert([{ name, phone, message }]);
     
     if (error) {
         console.error(error);
