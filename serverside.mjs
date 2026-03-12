@@ -60,7 +60,7 @@ app.post('/contact', async (req, res) => {
         .from('clientContacts')
         .insert([{ name, phone, message }]);
 
-    if (error) {
+    if (error && error.code !== '23505') {
         console.error(error);
         return res.status(500).json({ error: 'Failed to save' });
     }
