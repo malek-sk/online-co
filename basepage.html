@@ -252,6 +252,7 @@
 
         if (response.status === 400) {
             document.getElementById('popup-exists').style.display = 'flex';
+            btn.disabled = false;
         } else if (data.success) {
             document.getElementById('popup').style.display = 'flex';
         }
