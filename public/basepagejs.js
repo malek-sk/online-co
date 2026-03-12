@@ -60,19 +60,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 
-    // data l clien njibouha
-    document.getElementById('contact-form').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const data = {
-            name: e.target.name.value,
-            phone: e.target.phone.value,
-            message: e.target.message.value
-        };
-        const res = await fetch('/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        });
-    });
-
 });
