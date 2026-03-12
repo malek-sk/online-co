@@ -232,6 +232,10 @@
     document.getElementById('contact-form').addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        const btn = document.querySelector('.submit-button-premium');
+        btn.disabled = true;
+        btn.querySelector('span').textContent = 'Sending...';
+
         const name = document.getElementById('name').value;
         const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
