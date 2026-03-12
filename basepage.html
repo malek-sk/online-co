@@ -243,6 +243,8 @@
         });
 
         const data = await response.json();
+        console.log('status:', response.status);
+        console.log('data:', data);
 
         if (response.status === 400) {
             document.getElementById('popup-exists').style.display = 'flex';
