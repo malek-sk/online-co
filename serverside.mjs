@@ -47,13 +47,12 @@ app.get('/shop', (req, res) => {
 app.post('/contact', async (req, res) => {
     const { name, phone, message } = req.body;
 
-    const { data: existing } = await supabase
+    const { data: existing, error: checkError } = await supabase
         .from('clientContacts')
         .select('phone')
-        .eq('phone', phone)
-        .single();
+        .eq('phone', phone);
 
-    if (existing) {
+    if (existing && existing.length > 0) {
         return res.status(400).json({ error: 'Phone number already registered' });
     }
 
@@ -79,7 +78,6 @@ app.post('/contact', async (req, res) => {
 
     res.status(200).json({ success: true });
 });
-
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
