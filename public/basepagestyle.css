@@ -735,3 +735,46 @@ footer {
         opacity: 1;
     }
 }
+
+/* Mobile Responsiveness - Contact Section Only */
+@media (max-width: 768px) {
+    .contact {
+        padding: 40px 16px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .contact-info,
+    .contact-form-card {
+        width: 100%;
+        opacity: 1;
+    }
+
+    .contact-title-gradient {
+        font-size: 1.8rem;
+    }
+
+    .contact-card-pill {
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+    .contact-card-text span {
+        font-size: 1rem;
+    }
+
+    .contact-form-card {
+        padding: 20px;
+    }
+
+    .floating-group textarea {
+        height: 120px;
+    }
+
+    .submit-button-premium {
+        width: 100%;
+    }
+}
